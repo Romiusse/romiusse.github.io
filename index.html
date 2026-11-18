@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f9f3e8">
+  <meta name="description" content="Головоломки Rmsse Apps для Android: «Узоры», «Семечки» и «Котики по комнатам».">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:title" content="Rmsse Apps — спокойные головоломки">
+  <meta property="og:description" content="Плитки с народной росписью, пары цифр и дом с котятами.">
+  <meta property="og:image" content="https://romiusse.github.io/assets/tabletop-1440.webp">
+  <meta property="og:image:alt" content="Расписанные плитки, тетрадь и рыжий кот на столе">
+  <title>Rmsse Apps — спокойные головоломки</title>
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+  <a class="skip" href="#main">К содержанию</a>
+
+  <header class="top" id="top">
+    <div class="shell top-inner">
+      <a class="wordmark" href="#top" aria-label="Rmsse Apps, в начало">
+        <span class="mark" aria-hidden="true"></span>Rmsse Apps
+      </a>
+      <nav aria-label="Навигация по сайту">
+        <a href="#games">Игры</a>
+        <a href="#support">Поддержка</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="shell" id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <h1 id="hero-title">Спокойные<br class="hero-break"> головоломки</h1>
+        <p>Три игры для Android. Собирайте плитки, вычёркивайте пары цифр и расселяйте котят. Можно играть без интернета.</p>
+        <a class="action primary" href="#games">Выбрать игру</a>
+      </div>
+      <picture class="hero-picture">
+        <img src="assets/tabletop-960.webp"
+             srcset="assets/tabletop-720.webp 720w, assets/tabletop-960.webp 960w, assets/tabletop-1440.webp 1440w"
+             sizes="(max-width: 799px) calc(100vw - 36px), (max-width: 1300px) 55vw, 710px"
+             width="1440" height="960" fetchpriority="high"
+             alt="Гжельская тарелка, расписанные плитки и тетрадь на столе рядом с рыжим котом">
+      </picture>
+    </section>
+
+    <section class="catalog" id="games" aria-labelledby="games-title">
+      <h2 id="games-title">Наши игры</h2>
+      <div class="game-grid">
+        <article class="game uzory" aria-labelledby="uzory-title">
+          <img class="cover" src="assets/uzory-cover.webp" width="900" height="600" alt="" loading="lazy" decoding="async">
+          <div class="game-body">
+            <img class="game-icon" src="assets/uzory-icon.webp" width="70" height="70" alt="" loading="lazy">
+            <h3 id="uzory-title">Узоры</h3>
+            <p>Собирайте по три плитки с одинаковым узором. Каждая тройка расписывает часть тарелки.</p>
+            <a class="action store" href="https://www.rustore.ru/catalog/app/org.gamelab.uzory" aria-label="Открыть в RuStore: Узоры">Открыть в RuStore</a>
+          </div>
+        </article>
+
+        <article class="game semechki" aria-labelledby="semechki-title">
+          <img class="cover" src="assets/semechki-cover.webp" width="900" height="600" alt="" loading="lazy" decoding="async">
+          <div class="game-body">
+            <img class="game-icon" src="assets/semechki-icon.webp" width="70" height="70" alt="" loading="lazy">
+            <h3 id="semechki-title">Семечки</h3>
+            <p>Вычёркивайте одинаковые цифры и пары с суммой 10. Очистите тетрадный лист, чтобы получить пятёрку.</p>
+            <a class="action store" href="https://www.rustore.ru/catalog/app/org.gamelab.semechki" aria-label="Открыть в RuStore: Семечки">Открыть в RuStore</a>
+          </div>
+        </article>
+
+        <article class="game kotiki" aria-labelledby="kotiki-title">
+          <img class="cover" src="assets/kotiki-cover.webp" width="900" height="600" alt="" loading="lazy" decoding="async">
+          <div class="game-body">
+            <img class="game-icon" src="assets/kotiki-icon.webp" width="70" height="70" alt="" loading="lazy">
+            <h3 id="kotiki-title">Котики по комнатам</h3>
+            <p>Расселите котят так, чтобы в каждом ряду, столбце и комнате было по одному.</p>
+            <p class="availability">Готовится к выпуску</p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="shell" id="support">
+    <div class="footer-inner">
+      <h2>Поддержка</h2>
+      <a href="mailto:mr.event2015@yandex.ru">mr.event2015@yandex.ru</a>
+    </div>
+  </footer>
+</body>
+</html>
