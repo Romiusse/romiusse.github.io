@@ -141,7 +141,7 @@ nav a:hover { color: var(--clay); text-decoration: underline; }
   padding-block: clamp(44px, 5.4vw, 82px) clamp(60px, 6vw, 88px);
 }
 
-.hero h1, .catalog h2, .game h3, footer h2 { margin: 0; font-family: var(--serif); }
+.hero h1, .catalog h2, .game h3 { margin: 0; font-family: var(--serif); }
 
 .hero h1 {
   max-width: 11ch;
@@ -273,19 +273,6 @@ nav a:hover { color: var(--clay); text-decoration: underline; }
   font-weight: 600;
 }
 
-.footer-inner {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 12px 24px;
-  flex-wrap: wrap;
-  border-top: 1px solid var(--line);
-  padding-block: 25px 43px;
-}
-
-footer h2 { font-size: 1.36rem; letter-spacing: -0.045em; }
-footer a { color: var(--clay); overflow-wrap: anywhere; font-weight: 600; }
-
 @media (max-width: 1050px) {
   .shell { width: calc(100% - 64px); }
   .hero { gap: 29px; }
@@ -304,7 +291,6 @@ footer a { color: var(--clay); overflow-wrap: anywhere; font-weight: 600; }
   .hero-picture { border-radius: 16px; }
   .game-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
   .game h3 { font-size: clamp(1.38rem, 3.8vw, 1.75rem); }
-  .footer-inner { padding-bottom: 32px; }
 }
 
 @media (max-width: 539px) {
