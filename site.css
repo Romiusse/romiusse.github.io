@@ -272,13 +272,17 @@ nav a:hover { color: var(--clay); text-decoration: underline; }
 
 .privacy-policy {
   max-width: 72ch;
-  margin-bottom: clamp(40px, 6vw, 76px);
+  border-top: 1px solid var(--line);
   line-height: 1.6;
   overflow-wrap: anywhere;
   scroll-margin-top: 1.5rem;
 }
 
-.privacy-policy h2 { font-size: clamp(1.6rem, 3vw, 2.3rem); line-height: 1.18; }
+.privacy-policy:last-child { margin-bottom: 2rem; }
+.privacy-policy summary { padding: 12px 0; color: var(--clay); cursor: pointer; }
+.privacy-policy summary:hover { color: var(--clay-hover); }
+.privacy-policy summary h2 { display: inline; margin: 0; font-size: 1rem; line-height: 1.4; }
+.privacy-policy[open] { padding-bottom: 1rem; }
 .privacy-policy h3 { margin: 1.5em 0 0.4em; font-size: 1.2rem; }
 .privacy-policy p, .privacy-policy ul { margin: 0.65em 0; }
 .privacy-policy ul { padding-inline-start: 1.4em; }

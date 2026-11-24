@@ -82,8 +82,8 @@
       </div>
     </section>
 
-    <article class="privacy-policy" id="privacy-uzory" aria-labelledby="privacy-uzory-title">
-      <h2 id="privacy-uzory-title">Политика конфиденциальности игры «Узоры»</h2>
+    <details class="privacy-policy" id="privacy-uzory" name="privacy">
+      <summary><h2 id="privacy-uzory-title">Политика конфиденциальности игры «Узоры»</h2></summary>
       <p><time datetime="2026-11-20">20 ноября 2026 года</time></p>
       <p>Игра «Узоры» (Android, пакет <code>org.gamelab.uzory</code>) не просит регистрации и не запрашивает имя, телефон или почту игрока. Прогресс игры (пройденные уровни, расписанные тарелки, настройка звука) хранится на устройстве. При удалении данных приложения этот прогресс стирается.</p>
       <h3>Реклама</h3>
@@ -105,10 +105,10 @@
       <p>Игра не предназначена специально для детей и сознательно не собирает данные детей.</p>
       <h3>Изменения и связь</h3>
       <p>Если политика изменится, новая версия будет опубликована по этому же адресу. По вопросам о данных обращайтесь через <a href="https://romiusse.github.io/#support">раздел «Поддержка» на сайте разработчика</a>.</p>
-    </article>
+    </details>
 
-    <article class="privacy-policy" id="privacy-kotiki" aria-labelledby="privacy-kotiki-title">
-      <h2 id="privacy-kotiki-title">Политика конфиденциальности игры «Котики по комнатам»</h2>
+    <details class="privacy-policy" id="privacy-kotiki" name="privacy">
+      <summary><h2 id="privacy-kotiki-title">Политика конфиденциальности игры «Котики по комнатам»</h2></summary>
       <p><time datetime="2026-11-24">24 ноября 2026 года</time></p>
       <p>Чтобы играть в «Котики по комнатам» от Rmsse Apps (Android, пакет <code>org.gamelab.kotiki</code>), не нужны регистрация, имя, телефон или адрес электронной почты. Игра сохраняет расположение котиков, пройденные дома и настройку звука на устройстве. Чтобы стереть прогресс, удалите игру или очистите её данные в настройках Android.</p>
       <h3>Реклама</h3>
@@ -131,7 +131,7 @@
       <h3>Хранение данных и связь</h3>
       <p>Срок хранения переданных событий и идентификаторов зависит от сервиса и его настроек. Яндекс описывает сроки в своей политике конфиденциальности. Для Google Analytics они приведены в <a href="https://support.google.com/analytics/answer/7667196?hl=ru">справке о хранении данных</a>.</p>
       <p>По вопросам о данных и с запросом на их удаление обращайтесь в <a href="https://romiusse.github.io/#support">поддержку Rmsse Apps</a>. В обращении укажите название игры. Обновления этой политики публикуются по тому же адресу.</p>
-    </article>
+    </details>
   </main>
 
   <footer class="shell" id="support">
@@ -140,5 +140,28 @@
       <a href="mailto:mr.event2015@yandex.ru">mr.event2015@yandex.ru</a>
     </div>
   </footer>
+  <script>
+    const policies = document.querySelectorAll('details.privacy-policy');
+
+    function openLinkedPolicy(hash) {
+      const target = document.getElementById(hash.slice(1));
+      for (const policy of policies) {
+        policy.open = policy === target;
+      }
+      if (target && target.matches('details.privacy-policy')) {
+        target.scrollIntoView({ block: 'start' });
+      }
+    }
+
+    for (const link of document.querySelectorAll('a.privacy-link')) {
+      link.addEventListener('click', (event) => {
+        if (link.hash === location.hash && !event.ctrlKey && !event.metaKey && !event.shiftKey && !event.altKey) {
+          openLinkedPolicy(link.hash);
+        }
+      });
+    }
+    window.addEventListener('hashchange', () => openLinkedPolicy(location.hash));
+    openLinkedPolicy(location.hash);
+  </script>
 </body>
 </html>
